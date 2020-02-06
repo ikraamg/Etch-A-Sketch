@@ -27,7 +27,9 @@
 					newElem.style.height = `${70 / gridSize}vh`;
 					newElem.style.width = 'auto';
 					newElem.addEventListener('mouseover', () => {
-						if (newElem.style.backgroundColor !== '') {
+						// eslint-disable-next-line no-empty
+						if (newElem.style.opacity >= 1) {
+						} else if (newElem.style.backgroundColor !== '') {
 							const currentOpacity = parseFloat(newElem.style.opacity) + 0.3;
 							console.log(currentOpacity);
 							newElem.style.opacity = `${currentOpacity}`;
