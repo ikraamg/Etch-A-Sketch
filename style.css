@@ -3,9 +3,9 @@
 	border: 1px black solid;
 	grid-column-gap: 0;
 	grid-row-gap: 0;
-	width: 80vh;
+	width: 70vh;
 	position: fixed;
-	margin-left: calc(50vw - 40vh);
+	margin-left: calc(50vw - 35vh);
 	/* margin-bottom: 20vh; */
 }
 
