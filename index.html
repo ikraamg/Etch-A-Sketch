@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Etch-A-Sketch</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+
+	<body>
+		<h1 id="heading">Etch a Sketch</h1>
+		<div id="container"></div>
+
+		<script>
+			const container = document.getElementById('container');
+			// eslint-disable-next-line prefer-const
+			function fillGrid(gridSize) {
+				// eslint-disable-next-line no-plusplus
+				for (let i = 1; i <= gridSize * gridSize; i++) {
+					const newElem = document.createElement('div');
+					newElem.id = `div${i}`;
+					newElem.classList = 'gridDivs';
+					newElem.textContent = `div${i}`;
+					newElem.addEventListener('mouseover', () => {
+						newElem.style.backgroundColor = 'red';
+					});
+					const col = Math.ceil(i / gridSize); // increment col after each row is completed.
+					const row = i - Math.floor(i / gridSize) * gridSize; // increment row from 1 to gridsize for each column
+					newElem.style.gridArea = `${row} / ${col} / ${row + 1} / ${col + 1}`;
+					container.appendChild(newElem);
+				}
+			}
+
+			function createGrid(gridSize) {
+				container.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
+				container.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`;
+				fillGrid(gridSize);
+			}
+
+			createGrid(16);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,14 @@
+#container {
+	display: grid;
+	border: 1px black solid;
+	grid-column-gap: 0;
+	grid-row-gap: 0;
+}
+#container div {
+	border: 1px blue;
+}
+
+#heading {
+	text-align: center;
+	color: darkblue;
+}
