@@ -10,10 +10,12 @@
 
 	<body>
 		<h1 id="heading">Etch a Sketch</h1>
-		<div id="container"></div>
+		<button id="reset">Reset Grid</button>
+		<form id="container"></form>
 
 		<script>
 			const container = document.getElementById('container');
+			const reset = document.getElementById('reset');
 			// eslint-disable-next-line prefer-const
 			function fillGrid(gridSize) {
 				// eslint-disable-next-line no-plusplus
@@ -21,7 +23,7 @@
 					const newElem = document.createElement('div');
 					newElem.id = `div${i}`;
 					newElem.classList = 'gridDivs';
-					newElem.textContent = `div${i}`;
+					newElem.textContent = `${i}`;
 					newElem.addEventListener('mouseover', () => {
 						newElem.style.backgroundColor = 'red';
 					});
@@ -33,12 +35,23 @@
 			}
 
 			function createGrid(gridSize) {
+				while (container.firstChild) {
+					container.removeChild(container.firstChild);
+				}
 				container.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
 				container.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`;
 				fillGrid(gridSize);
 			}
 
 			createGrid(16);
+
+			reset.addEventListener('click', () => {
+				const all = document.getElementsByClassName('gridDivs');
+				for (let i = 0; i < all.length; i++) {
+					all[i].style.backgroundColor = '';
+				}
+				createGrid(prompt('how large do you want your grid?'));
+			});
 		</script>
 	</body>
 </html>

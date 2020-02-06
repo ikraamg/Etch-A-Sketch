@@ -12,3 +12,9 @@
 	text-align: center;
 	color: darkblue;
 }
+
+#reset {
+	margin-bottom: 2ex;
+	font-size: 2ex;
+	background-color: lightgray;
+}
