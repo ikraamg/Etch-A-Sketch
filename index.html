@@ -23,9 +23,22 @@
 					const newElem = document.createElement('div');
 					newElem.id = `div${i}`;
 					newElem.classList = 'gridDivs';
-					newElem.textContent = `${i}`;
+					// newElem.textContent = `${i}`;
+					newElem.style.height = `${80 / gridSize}vh`;
+					newElem.style.width = 'auto';
 					newElem.addEventListener('mouseover', () => {
-						newElem.style.backgroundColor = 'red';
+						if (newElem.style.backgroundColor !== '') {
+							const currentOpacity = parseFloat(newElem.style.opacity) + 0.3;
+							console.log(currentOpacity);
+							newElem.style.opacity = `${currentOpacity}`;
+						} else {
+							// eslint-disable-next-line prettier/prettier
+							const randomColor = Math.floor(Math.random() * 16777215).toString(
+								16
+							);
+							newElem.style.backgroundColor = `#${randomColor}`;
+							newElem.style.opacity = '0.1';
+						}
 					});
 					const col = Math.ceil(i / gridSize); // increment col after each row is completed.
 					const row = i - Math.floor(i / gridSize) * gridSize; // increment row from 1 to gridsize for each column
@@ -47,10 +60,18 @@
 
 			reset.addEventListener('click', () => {
 				const all = document.getElementsByClassName('gridDivs');
+				// eslint-disable-next-line no-plusplus
 				for (let i = 0; i < all.length; i++) {
 					all[i].style.backgroundColor = '';
 				}
-				createGrid(prompt('how large do you want your grid?'));
+
+				let newGridsize = 0;
+				while (newGridsize <= 0 || newGridsize > 100) {
+					newGridsize = prompt(
+						'How large do you want your grid?, enter a number betwen 1 and 100'
+					);
+				}
+				createGrid(newGridsize);
 			});
 		</script>
 	</body>

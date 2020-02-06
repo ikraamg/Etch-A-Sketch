@@ -3,18 +3,25 @@
 	border: 1px black solid;
 	grid-column-gap: 0;
 	grid-row-gap: 0;
-}
-#container div {
-	border: 1px blue;
+	width: 80vh;
+	position: fixed;
+	margin-left: calc(50vw - 40vh);
+	/* margin-bottom: 20vh; */
 }
 
 #heading {
 	text-align: center;
 	color: darkblue;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+		'Lucida Sans', 'Arial', 'sans-serif';
 }
 
 #reset {
 	margin-bottom: 2ex;
 	font-size: 2ex;
-	background-color: lightgray;
+	background-color: rgb(64, 207, 119);
+	align-self: center;
+	align-content: center;
+	width: 100%;
+	border-radius: 20ex;
 }
