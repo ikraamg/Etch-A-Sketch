@@ -1,3 +1,5 @@
+https://img.shields.io/badge/Developer-Available%20for%20Hire-brightgreen
+
 # Etch_A_Sketch
 
 ### This is cool little JS project that simulates the physical magnetic Etch_A_Sketch boards from back in the day
