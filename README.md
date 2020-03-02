@@ -46,7 +46,6 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - The Odin project for the project plan
-- Apple.com for the original website
 - sanitize.css creators for the opinionated css reset file
 
 ## 📝 License
