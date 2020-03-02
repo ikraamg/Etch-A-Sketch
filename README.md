@@ -37,7 +37,7 @@ A browser of your choice, preferrably Chrome.
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [](https://github.com/ikraamg/Etch-A-Sketch/issues).
+Feel free to check the [issues page.](https://github.com/ikraamg/Etch-A-Sketch/issues).
 
 ## Show your support
 
