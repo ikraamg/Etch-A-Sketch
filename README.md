@@ -1,4 +1,4 @@
-[![hire-badge](https://img.shields.io/badge/Consult%20/%20Hire%20Ikraam-Click%20to%20Contact-brightgreen](mailto:consult.ikraam@gmail.com)
+[![hire-badge](https://img.shields.io/badge/Consult%20/%20Hire%20Ikraam-Click%20to%20Contact-brightgreen)](mailto:consult.ikraam@gmail.com)
 
 # Etch_A_Sketch
 
